@@ -9,15 +9,5 @@
       "src": "public/index.html",
       "use": "@vercel/static"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/generate",
-      "dest": "/api/generate.js"
-    },
-    {
-      "src": "/",
-      "dest": "/public/index.html"
-    }
   ]
 }
