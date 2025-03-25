@@ -25,7 +25,7 @@ export default async function handler(req, res) {
           }
         ]
       }),
-      timeout: 10000 // Timeout efter 20 sekunder
+      timeout: 20000 // Timeout på 20 sekunder
     });
 
     const data = await response.json();
@@ -37,6 +37,6 @@ export default async function handler(req, res) {
 
 function formatInput(input) {
   return Object.entries(input)
-    .map(([key, val]) => `• ${key}:\n${val}`)
-    .join('\\n\\n');
+    .map(([key, val]) => `${key}: ${val}`) // Fjerner linjeskift og utilsigtede tegn
+    .join("\n"); // Sørg for at alle data er korrekt formateret som én tekst
 }
