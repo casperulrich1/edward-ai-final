@@ -37,6 +37,6 @@ export default async function handler(req, res) {
 
 function formatInput(input) {
   return Object.entries(input)
-    .map(([key, val]) => `${key}: ${val}`) // Fjerner linjeskift og utilsigtede tegn
-    .join("\n"); // Sørg for at alle data er korrekt formateret som én tekst
+    .map(([key, val]) => `${key}: ${val}`) // Fjern specialtegn og linjeskift
+    .join("\n");
 }
